@@ -49,12 +49,12 @@ public:
         return *this;
     }
 
-    void SetDraftPosition(int position)
+    void SetDraftPosition(size_t position)
     {
         _draftPosition = position;
     }
 
-    int GetDraftPosition() const
+    size_t GetDraftPosition() const
     {
         return _draftPosition;
     }
@@ -77,10 +77,10 @@ public:
 private:
     string _teamName;
     unsigned int _weight;
-    int _draftPosition;
+    size_t _draftPosition;
 };
 
-void AssignDraftPosition(vector<Team>& teams, const int draftPosition)
+void AssignDraftPosition(vector<Team>& teams, const size_t draftPosition)
 {
     // build the candidate pool - each non-assigned teamed gets as many chances as their weight.
     vector<Team*> candidatePool;
@@ -96,7 +96,7 @@ void AssignDraftPosition(vector<Team>& teams, const int draftPosition)
     }
 
     // pick a random number and assign that index in candidatePool draftPosition
-    const int randomNumber = ::GetNextRandomNumber(candidatePool.size());
+    const size_t randomNumber = ::GetNextRandomNumber(candidatePool.size());
     candidatePool[randomNumber]->SetDraftPosition(draftPosition);
 }
 
