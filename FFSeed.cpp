@@ -104,18 +104,20 @@ int main()
 {
     // Set up the initial teams list, with place they finished the previous season.
     vector<Team> teams{
-        Team("jacknic", 1),
-        Team("benjayim", 2),
-        Team("dayeung", 4),
-        Team("juhardin", 6),
-        Team("dachan", 7),
-        Team("jselbie", 8),
-        Team("jbruso", 10),
-        Team("shivrajg", 11),
+        Team("jselbie", 1),
+        Team("heath", 2),
+        Team("jbruso", 3),
+        Team("jacknic", 4),
+        Team("dachan", 5),
+        Team("shivrajg", 6),
+        Team("benjayim", 8),
+        Team("cschle", 9),
+        Team("jorgeam", 10),
+        Team("juhardin", 11),
         Team("brianjon", 12),
-        Team("heath", 6),
-        Team("jorgeam", 6),
-        Team("cschle", 6)
+
+    // Set up new teams, seeded with position 6.
+        Team("libbym", 6)
     };
 
     // assign draft positions, 1-12. Order is important, must go most desirable->least desirable
