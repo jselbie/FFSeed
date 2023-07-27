@@ -102,22 +102,23 @@ void AssignDraftPosition(vector<Team>& teams, const size_t draftPosition)
 
 int main()
 {
-    // Set up the initial teams list, with place they finished the previous season.
+    int const base = 10;
+    // Set up the initial teams list, based on their position in last year's random draft
     vector<Team> teams{
-        Team("brianjon",   1),
-        Team("jacknic",    2),
-        Team("benjayim",   3),
-        Team("heath",      5),
-        Team("juhardin",   6),
-        Team("cschle",     7),
-        Team("shivrajg",   8),
-        Team("dachan",     10),
-        Team("jselbie",    11),
-        Team("jbruso",     12),
+        Team("cschle",     3 + base),
+        Team("juhardin",   4 + base),
+        Team("brianjon",   5 + base),
+        Team("jacknic",    6 + base),
+        Team("dachan",     7 + base),
+        Team("benjayim",   8 + base),
+        Team("jbruso",     9 + base),
+        Team("shivrajg",   10 + base),
+        Team("heath",      11 + base),
+        Team("jselbie",    12 + base),
 
-    // Set up new teams, seeded with position 6.
-        Team("cseirer",    6),
-        Team("connorhitt", 6)
+    // Set up new teams, seeded with position 7.
+        Team("cseirer",    7 + base),
+        Team("connorhitt", 7 + base)
     };
 
     // assign draft positions, 1-12. Order is important, must go most desirable->least desirable
