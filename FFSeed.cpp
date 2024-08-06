@@ -103,22 +103,23 @@ void AssignDraftPosition(vector<Team>& teams, const size_t draftPosition)
 int main()
 {
     int const base = 10;
+
     // Set up the initial teams list, based on their position in last year's random draft
     vector<Team> teams{
-        Team("cschle",     3 + base),
-        Team("juhardin",   4 + base),
-        Team("brianjon",   5 + base),
-        Team("jacknic",    6 + base),
-        Team("dachan",     7 + base),
-        Team("benjayim",   8 + base),
-        Team("jbruso",     9 + base),
-        Team("shivrajg",   10 + base),
-        Team("heath",      11 + base),
-        Team("jselbie",    12 + base),
+        Team("juhardin",   1 + base),
+        Team("shivrajg",   2 + base),
+        Team("dachan",     3 + base),
+        Team("jselbie",    4 + base),
+        Team("connorhitt", 5 + base),
+        Team("heath",      7 + base),
+        Team("jacknic",    8 + base),
+        Team("cschle",     9 + base),
+        Team("benjayim",   10 + base),
+        Team("cseirer",    11 + base),
 
     // Set up new teams, seeded with position 7.
-        Team("cseirer",    7 + base),
-        Team("connorhitt", 7 + base)
+        Team("hanselip",   7 + base),
+        Team("ningzou",    7 + base)
     };
 
     // assign draft positions, 1-12. Order is important, must go most desirable->least desirable
@@ -129,9 +130,9 @@ int main()
 
     // sort so we can have nice output
     std::sort(teams.begin(), teams.end(), [](const Team& a, const Team& b)
-        {
-            return (a.GetDraftPosition() < b.GetDraftPosition());
-        });
+    {
+        return (a.GetDraftPosition() < b.GetDraftPosition());
+    });
 
     // print the output
     for (size_t i = 0; i < teams.size(); i++)
@@ -141,14 +142,3 @@ int main()
 
     return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
