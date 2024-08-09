@@ -102,7 +102,7 @@ void AssignDraftPosition(vector<Team>& teams, const size_t draftPosition)
 
 int main()
 {
-    int const base = 10;
+    int const base = 5;
 
     // Set up the initial teams list, based on their position in last year's random draft
     vector<Team> teams{
