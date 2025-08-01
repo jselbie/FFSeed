@@ -105,21 +105,21 @@ int main()
     int const base = 5;
 
     // Set up the initial teams list, based on their position in last year's random draft
-    vector<Team> teams{
-        Team("juhardin",   1 + base),
-        Team("shivrajg",   2 + base),
-        Team("dachan",     3 + base),
-        Team("jselbie",    4 + base),
-        Team("connorhitt", 5 + base),
+    vector<Team> teams {
+        Team("benjayim",   2 + base),
+        Team("ningzou",    3 + base),
+        Team("cschle",     4 + base),
+        Team("jacknic",    5 + base),
+        Team("jselbie",    6 + base),
         Team("heath",      7 + base),
-        Team("jacknic",    8 + base),
-        Team("cschle",     9 + base),
-        Team("benjayim",   10 + base),
-        Team("cseirer",    11 + base),
+        Team("cseirer",    9 + base),
+        Team("juhardin",   10 + base),
+        Team("connorhitt", 11 + base),
+        Team("hanselip",   12 + base),
 
     // Set up new teams, seeded with position 7.
-        Team("hanselip",   7 + base),
-        Team("ningzou",    7 + base)
+        Team("brianjon",   7 + base),
+        Team("jbruso",     7 + base)
     };
 
     // assign draft positions, 1-12. Order is important, must go most desirable->least desirable
